@@ -1,0 +1,27 @@
+package com.in28minutes.rest.webservices.helloworld;
+
+public class HelloWorldBean {
+    
+    private String message;
+
+    public HelloWorldBean() {
+    }
+
+    public HelloWorldBean(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    //generate toString method
+    @Override
+    public String toString() {
+        return "HelloWorldBean{message='" + message + "'}";
+    }
+}
