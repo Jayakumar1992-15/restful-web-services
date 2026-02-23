@@ -2,14 +2,20 @@ package com.in28minutes.rest.webservices.user;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
+@Entity
+@Table(name="user_details")
 public class User {
-
+    
+    @Id
+    @GeneratedValue
     private Integer id;
     @Size(min=2,message="Name should have atleast 2 characters")
     private String name;
     @Past(message="Birth Date should be in the past")
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
     public User() {
